@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Quy Đổi Tiền</title>
 
 </head>
 <body>
@@ -14,7 +14,7 @@
         <th></th>
     </tr>
     <tr>
-        <td><input type="text" id="Amount"></td>
+        <td><input type="number" id="Amount"></td>
         <td>
             <select id="From">
                 <option value="VND">VND</option>
@@ -35,9 +35,33 @@
 </body>
 <script>
     function changeMoney(){
-        alert(document.getElementById(Amount).value)
-        alert(document.getElementById(From).value)
-        alert(document.getElementById(To).value)
+        let giatrinhap =document.getElementById('Amount').value;
+        let From =document.getElementById('From').value;
+        let To =document.getElementById('To').value;
+        if (From == To){
+            alert(giatrinhap);
+        }
+        if (From =="VND" && To=="USD"){
+            alert(giatrinhap/24000);
+
+        }
+        if (From == To){
+            alert(giatrinhap);
+        }
+        if(From=="VND" && To=="USD"){
+            alert(giatrinhap * 24000);
+
+        }
+        if (From == To){
+            alert(giatrinhap);
+
+        }
+        if(From=="USD"&&To=="VND")
+            alert(giatrinhap*24000);
+
     }
+
+
 </script>
+
 </html>

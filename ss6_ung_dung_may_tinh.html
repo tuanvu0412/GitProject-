@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caculator</h3>
+<table>
+    <input type="Number" id="N1">
+    <input type="Number" id="N2">
+
+    <tr>
+        <td>
+        <button onclick="Add()">Cộng+</button>
+        <button onclick="Sub()">Trừ-</button>
+        <button onclick="Mul()">Nhân*</button>
+        <button onclick="Divi()">Chia/</button>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+     function Add(){
+         let A=document.getElementById('N1').value*1;
+         let B=document.getElementById('N2').value*1;
+         let C=(A+B)
+         alert (C)
+    }
+    function Sub(){
+        let A=document.getElementById('N1').value*1;
+        let B=document.getElementById('N2').value*1;
+        let C=(A-B)
+        alert (C)
+     }
+     function Mul(){
+         let A=document.getElementById('N1').value*1;
+         let B=document.getElementById('N2').value*1;
+         let C=(A*B)
+         alert (C)
+     }
+     function Divi(){
+         let A=document.getElementById('N1').value*1;
+         let B=document.getElementById('N2').value*1;
+         let C=(A/B)
+         alert (C)
+     }
+</script>
+</html>
