@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thunhap = prompt('thu nhập cá nhân') * 1;
+    let thue = prompt('nhập thuế') * 1;
+    let c = thunhap * thue / 100
+    if (thunhap >= 15000000 && thue === 10) {
+        alert('tiền thuế cần phải đóng' + c);
+    } else {
+        alert('không phải chi trả thuế');
+    }
+</script>
+
+</body>
+</html>

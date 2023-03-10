@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập số tiền cho vay') * 1;
+    let b = prompt('nhập số tháng') * 1;
+    let c = prompt('nhập lãi xuất hàng tháng') * 1;
+    for (let i = 0; i < b; i++) {
+        let x = c * a / 100;
+        a = a + x;
+        console.log('a:'+a)
+    }
+    alert('Tổng số tiền nhận được: ' + a);
+
+</script>
+</body>
+</html>
