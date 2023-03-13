@@ -10,15 +10,15 @@
     let number = 2;
     while (count < 200) {
         let isPrime = true;
-        if (number == 2 || number == 3) {
+        if (number === 2 || number === 3) {
             console.log(number + "là số nguyên tố");
             number++;
             count++;
             continue;
         }
-        for (let i = 2; i <= Math.sqrt(number); i++) ;
+        for (let i = 2; i <= Math.sqrt(number); i++)
         {
-            if (number % i == 0) {
+            if (number % i === 0) {
                 isPrime = false;
                 break;
             }
