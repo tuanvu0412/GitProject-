@@ -16,14 +16,15 @@
             count++;
             continue;
         }
-        for (let i = 2; i <= Math.sqrt(number); i++) {
+        for (let i = 2; i <= Math.sqrt(number); i++) ;
+        {
             if (number % i == 0) {
                 isPrime = false;
                 break;
             }
         }
         if (isPrime) {
-            console.log(number + "là số nguyên tố")
+            console.log(number + "là số nguyên tố");
             count++;
         }
         number++;
