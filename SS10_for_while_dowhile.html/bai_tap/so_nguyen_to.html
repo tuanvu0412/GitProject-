@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let number = 2;
+    while (count < 200) {
+        let isPrime = true;
+        if (number == 2 || number == 3) {
+            console.log(number + "là số nguyên tố");
+            number++;
+            count++;
+            continue;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(number + "là số nguyên tố")
+            count++;
+        }
+        number++;
+    }
+</script>
+
+</body>
+</html>
