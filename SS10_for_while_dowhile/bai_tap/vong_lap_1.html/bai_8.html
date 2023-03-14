@@ -5,17 +5,17 @@
     <title>Đoán số</title>
 </head>
 <body>
-<button onclick="clickFunction()">play</button>
+<button onclick="click()">play</button>
 <script>
-    function clickFunction() {
+    function click() {
         let khoang = prompt("Nhập khoảng muốn đoán") * 1;
-        let soNgauNhien = Math.random() * khoang;
+        let ranDom = Math.random() * khoang;
         for (i = 0; i < 3; i++) {
             let doan = prompt("Nhập số bạn đoán") * 1;
-            if (doan == soNgauNhien) {
+            if (doan == ranDom) {
                 alert("chúc mừng bạn đoán chính xác");
                 break;
-            } else if (doan > soNgauNhien) {
+            } else if (doan > ranDom) {
                 alert("số bạn đoán lớn hơn");
             } else {
                 alert("số bạn đoán nhỏ hơn");
