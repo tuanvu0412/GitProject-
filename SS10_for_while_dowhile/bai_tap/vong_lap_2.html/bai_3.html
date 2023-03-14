@@ -12,6 +12,35 @@
         }
         document.write("<br>");
     }
+    document.write("<br>");
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 5; j > i; j--) {
+            document.write('*');
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = 5; i > 0;i-- ) {//i=5
+        for (let j = 0; j < 5 ; j++) { //b1: j>=4, b2>=3
+            if (j >= i - 1) {
+                document.write('*');
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = 0; i <= 5;i++ ) {//i=5
+        for (let j = 5; j > i ; j--) { //b1: j>=4, b2>=3
+            if (j >= i ) {
+                document.write('*');
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
 </script>
 </body>
 </html>
