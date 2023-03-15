@@ -11,16 +11,10 @@
     let v = 0;
     for (let i = 0; i < myNumbers.length; i++) {
         if (input == myNumbers[i]) {
-            v = i;
+            v = input;
             console.log(i)
         }
     }
-    for (let j = v; j < myNumbers.length; j++) {
-        myNumbers[j] = myNumbers[j + 1];
-    }
-    myNumbers[myNumbers.length - 1] = 0;
-    console.log(myNumbers);
 </script>
-
 </body>
 </html>
