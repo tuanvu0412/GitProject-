@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myNumbers = [20, 2, 10, 35, 6, 15, 22, 12, 8, 40];
+    let input = prompt('nhập số cần kiểm tra:') * 1;
+    let v = 0;
+    for (let i = 0; i < myNumbers.length; i++) {
+        if (input == myNumbers[i]) {
+            v = input;
+            console.log(v)
+        }
+    }
+    for (let j = v; j < myNumbers.length; j++) {
+        myNumbers[j] == myNumbers[j + 1];
+    }
+    myNumbers[myNumbers.length - 1] = 0;
+    console.log(myNumbers);
+</script>
+
+</body>
+</html>

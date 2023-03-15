@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myNumbers = [20, 2, 10, 35, 6, 15, 22, 12, 8, 40];
+    let max = myNumbers[0]
+    let tong = 0;
+    for (let i = 0; i < myNumbers.length; i++) {
+        if (myNumbers[i] > max) {
+            max = myNumbers[i];
+        }
+        tong += myNumbers[i];
+    }
+    document.write('giá trị lớn nhất trong mảng là:' + max + 'giá trị trung bình là:' + tong / myNumbers.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myNumbers = [20, 2, 10, 35, 6, 15, 22, 12, 8, 40];
+    let max = myNumbers[0]
+    let index;
+    for (let i = 1; i < myNumbers.length; i++) {
+        if (myNumbers[i] > max) {
+            max = myNumbers[i];
+            index = i;
+        }
+    }
+    document.write(max + 'vị trí là' + index);
+</script>
+
+</body>
+</html>
