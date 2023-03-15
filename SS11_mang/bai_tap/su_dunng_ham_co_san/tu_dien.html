@@ -16,7 +16,10 @@
         for (let i = 0; i < vietSub.length; i++) {
             if (input == vietSub[i]) {
                 document.write(englishes[i]);
-                break;
+            } else if (input == englishes[i]) {
+                document.write(vietSub[i]);
+            } else {
+                alert('là từ không nằm trong khả năng dịch của chúng tôi')
             }
         }
     }
