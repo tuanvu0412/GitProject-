@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="text" id="key"></label>
+<button type="button" onclick="tranSlate()">dich</button>
+</body>
+<script>
+    function tranSlate() {
+        let vietSub = ["kẹo", "con cá", "trường học", "sữa", "hạt đậu"];
+        let englishes = ["candy", "fish", "school", "milk", "nut"];
+        let input = document.getElementById("key").value;
+        for (let i = 0; i < vietSub.length; i++) {
+            if (input == vietSub[i]) {
+                document.write(englishes[i]);
+                break;
+            }
+        }
+    }
+</script>
+</html>
