@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myNumbers = [0, 2, 5, 4, 6, 8];
+    let chenSo = [myNumbers[0]];
+    for (let i = 1; i <= myNumbers.length; i++) {
+        if (myNumbers[i] % 2 === 0 && myNumbers[i - 1] % 2 === 0) {
+            chenSo.push("-", myNumbers[i])
+        } else {
+            chenSo.push(myNumbers[i])
+        }
+    }
+    document.write(chenSo.join(""));
+</script>
+</body>
+</html>
