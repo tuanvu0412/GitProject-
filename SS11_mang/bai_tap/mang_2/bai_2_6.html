@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArray = ['cong', '-', 'tru', '-', 'nhan', '-', 'chia'];
+    let newArray = [];
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] == "-") {
+            myArray[i] == "_";
+            newArray.push("_");
+
+        } else {
+            newArray.push(myArray[i]);
+        }
+    }
+    console.log(newArray);
+</script>
+
+</body>
+</html>
