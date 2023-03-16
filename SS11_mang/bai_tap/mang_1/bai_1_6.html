@@ -8,18 +8,20 @@
 <script>
     let myNumbers = [20, 2, 10, 35, 6, 15, 22, 12, 8, 40];
     let kiemTra = prompt('nhập V cần kiểm tra:') * 1;
-    let a=true
+    let a = false
     for (let i = 0; i < myNumbers.length; i++) {
         if (kiemTra == myNumbers[i]) {
-            a=false
+            a = true
             break;
         }
 
-    }if(a==false){
+    }
+    if (a == true) {
         alert('ok')
-    }else {
+    } else {
         alert('not')
     }
+    console.log(a);
 </script>
 
 </body>
