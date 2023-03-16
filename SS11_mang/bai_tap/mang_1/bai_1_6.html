@@ -8,14 +8,17 @@
 <script>
     let myNumbers = [20, 2, 10, 35, 6, 15, 22, 12, 8, 40];
     let kiemTra = prompt('nhập V cần kiểm tra:') * 1;
+    let a=true
     for (let i = 0; i < myNumbers.length; i++) {
         if (kiemTra == myNumbers[i]) {
-            alert('V is in the array');
+            a=false
             break;
-        } else {
-            alert('v is not in the array');
         }
 
+    }if(a==false){
+        alert('ok')
+    }else {
+        alert('not')
     }
 </script>
 
