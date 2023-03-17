@@ -13,14 +13,15 @@
         let vietSub = ["kẹo", "con cá", "trường học", "sữa", "hạt đậu"];
         let englishes = ["candy", "fish", "school", "milk", "nut"];
         let input = document.getElementById("key").value;
+        let flag = false;
+        let star;
         for (let i = 0; i < vietSub.length; i++) {
             if (input == vietSub[i]) {
-                document.write(englishes[i]);
-            } else if (input == englishes[i]) {
-                document.write(vietSub[i]);
-            } else {
-                alert('là từ không nằm trong khả năng dịch của chúng tôi')
+                flag = true
+                star = i;
             }
+            }if (flag) {
+            document.write(englishes[star])
         }
     }
 </script>
