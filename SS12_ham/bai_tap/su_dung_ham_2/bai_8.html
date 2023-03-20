@@ -6,18 +6,17 @@
 </head>
 <body>
 <script>
-    function swap(array, a, b, c, d, e) {
-        let temp1 = array[a];
-        let temp2 = array[b];
-        array[a] = array [e];
-        array[b] = array[d];
-        array[d] = temp2;
-        array[e] = temp1;
+
+    function swap(array) {
+        let newArray = [];
+        for (let i = array.length - 1; i >= 0; i--) {
+            newArray.push(array[i]);
+        }
+        document.write(newArray);
     }
-    let array = [-1, 3, 7, 6,15];
-    swap(array, 0, 1, 2, 3, 4);
-    document.write(array);
-    swap();
+
+    let array = [1, 3, 7, 6, 15];
+    swap(array);
 
 </script>
 

@@ -6,13 +6,16 @@
 </head>
 <body>
 <script>
-    function findNumber(a){
-        if(a>=0){
-           return true;
-        }else{
+    function findNumber(a) {
+        if (a <= 0) {
             return false;
-        }console.log(a)
-    }let a=prompt('nhập vào một số nguyên dương')*1;
+        } else {
+            return true;
+        }
+        console.log(a);
+    }
+
+    let a = prompt('nhập vào một số nguyên dương') * 1;
     findNumber(a);
 </script>
 

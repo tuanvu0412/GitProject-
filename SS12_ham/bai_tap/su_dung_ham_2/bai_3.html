@@ -6,12 +6,16 @@
 </head>
 <body>
 <script>
-    function myNumber(){
-        let result=(a*(a-1));
-        return result;
+    function myNumber(a) {
+        let count = 1;
+        for (let i = a; i > 0; i--) {
+            count *= i;
+        }
+        alert(count);
+    }
 
-    }let a=prompt("nhập a")*1;
-    alert(myNumber());
+    let a = prompt("nhập a") * 1;
+    myNumber(a);
 </script>
 
 </body>
