@@ -5,13 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="star">
-<button onclick="myNumbers()">check</button>
 <script>
-    function myNumbers() {
+    function myNumbers(input) {
         let myStar1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
         let myStar2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-        let input = document.getElementById("star").value;
         let flag = false;
         let index;
         for (let i = 0; i < myStar1.length; i++) {
@@ -25,8 +22,8 @@
             document.write(myStar2[index]);
         }
     }
-
-    myNumbers();
+    let findStar = prompt('nhập ngôi sao cần tìm')
+    myNumbers(findStar);
 </script>
 
 </body>
