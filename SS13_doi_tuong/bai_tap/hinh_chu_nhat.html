@@ -26,18 +26,20 @@
         tinhChuVi() {
             return (this.width + this.height) * 2;
         }
-        canVas(){
+
+        canVas() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            ctx.fillStyle='#ff6699';
+            ctx.fillStyle = '#ff6699';
             ctx.rect(30, 30, this.width, this.height);
-            ctx.fillText("Hello C0223G1",40,50);
+            ctx.fillText("Hello C0223G1", 40, 50);
             ctx.stroke();
 
         }
     }
-    let chieuDai=prompt('nhập chiều dài')*1;
-    let chieuRong=prompt('nhập chiều rộng')*1;
+
+    let chieuDai = prompt('nhập chiều dài') * 1;
+    let chieuRong = prompt('nhập chiều rộng') * 1;
     let myRectangle = new Rectangle(chieuDai, chieuRong);
     document.write('diện tích của hình chữ nhật là' + myRectangle.tinhDienTich());
     document.write('chu vi của hình chữ nhật là' + myRectangle.tinhChuVi());
