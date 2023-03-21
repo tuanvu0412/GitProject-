@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+         constructor(celsius) {
+
+             this.celsius = function () {
+                 return ((celsius * 1.8) + 32);
+             }
+             this.ToKenvin = function () {
+                 return (celsius + 273.15);
+
+             }
+         }
+    }
+    let rec1 = new Temperature(25);
+    let main2 = rec1.celsius();
+    let main3 = rec1.ToKenvin();
+    document.write(" Độ F là: "+ main2 +'<br/>'+ " Độ Ken là " + main3);
+</script>
+
+</body>
+</html>
