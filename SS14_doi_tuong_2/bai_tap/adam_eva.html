@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        dereaseApple() {
+            if (this.isEmpty()) {
+                alert('táo đã hết');
+            } else {
+                this.weight--;
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, genger, weight) {
+            this.name = name;
+            this.genger = genger;
+            this.weight = weight
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isMale() {
+            if (this.genger == "nam") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGenger() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.dereaseApple();
+                this.weight++;
+            } else {
+                alert('táo đã hết');
+            }
+        }
+
+        say(string) {
+            document.write(string);
+        }
+    }
+
+    let adam = new Human("adam", 1, 70);
+    let eva = new Human("eva", 2, 50);
+    let apple = new Apple(10);
+    adam.say("Adam said:  HELLO, I'm Adam"+"<br/>");
+    eva.say("Eva said:  HI, I'm Eva"+"<br/>");
+    adam.say("Adam said:  Hey Eva, do you want eat an apple?"+"<br/>");
+    eva.say("Eva said:  yeah, sure"+"<br/>");
+    eva.eat(apple);
+    adam.say("Adam said:Do you like it?"+"<br/>");
+    eva.say("Eva said:  It's good, you also eat going"+"<br/>");
+    adam.say("Adam said:  Oke, we let's eat together"+"<br/>");
+    adam.eat(apple);
+    eva.eat(apple);
+    adam.eat(apple);
+    eva.eat(apple);
+    adam.eat(apple);
+    adam.say("Adam said: Do you want eating more?" +"<br/>");
+    eva.say("Eva said:  I'm full, tks somuch"+"<br/>");
+    document.write("số cân nặng của Adam sau khi ăn táo là :"+adam.weight+"<br/>");
+    document.write("số cân nặng của Eva sau khi ăn táo là :"+eva.weight+"<br/>");
+    document.write("số táo còn lại là:"+apple.getWeight());
+
+
+
+</script>
+
+</body>
+</html>
