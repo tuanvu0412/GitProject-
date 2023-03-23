@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="productName" type="text" placeholder="Enter Name">
+<button onclick="addNewProduct()">Add</button>
+<p id="display"></p>
+<script>
+    let productArray = [
+        {
+            "name": "Nokia",    
+            "isEdit": false,
+        },
+        {
+            "name": "Sam sung",
+            "isEdit": false,
+        },
+        {
+            "name": "Iphone",
+            "isEdit": false,
+        },
+        {
+            "name": "LG",
+            "isEdit": false,
+        }
+    ]
+    displayProducts();
+    function editById(index){
+        productArray[index].isEdit = true;
+        displayProducts();
+    }
+
+    function deleteByIndex(index) {
+        let deleteConf = confirm("Bạn có muốn xoá sản phẩm : "+ productArray[index]+ "?????");
+        if (deleteConf){
+            productArray.splice(index,1);
+        }
+
+      displayProducts();
+    }
+    function addNewProduct() {
+        let productName = document.getElementById("productName").value;
+        productArray.push({
+            "name": productName,
+            "isEdit": false,
+        });
+        document.getElementById("productName").value ="";
+        displayProducts();
+    }
+
+    function onBlurInput(index) {
+        const product = document.getElementById("productId").value;
+        productArray[index].name = product;
+        productArray[index].isEdit = false;
+        displayProducts();
+    }
+
+    function displayProducts() {
+        let tableString = `
+            <table border="1">
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Sửa</th>
+                <th>Xoá</th>
+             </tr>
+        `;
+        productArray.forEach((item, i) => {
+            tableString += `
+                <tr>
+                    <td>${(i + 1)}</td>
+                    <td>${item?.isEdit ? `<input id="productId" value="${item.name}" onblur="onBlurInput(${i})"/>` : item?.name}</td>
+                    <td><button onclick="editById(${i})" type="button">Edit</button></td>
+                    <td><button onclick="deleteByIndex(${i})" type="button">Delete</button></td>
+                </tr>
+            `;
+        })
+        // for (let i = 0; i < productArray.length; i++) {
+        //     tableString += `
+        //         <tr>
+        //             <td>${(i + 1)}</td>
+        //             <td>${productArray[i]}</td>
+        //             <td><button onclick="editById(${i})" type="button">Edit</button></td>
+        //             <td><button onclick="deleteByIndex(${i})" type="button">Delete</button></td>
+        //         </tr>
+        //     `;
+        // }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+</script>
+</body>
+</html>
