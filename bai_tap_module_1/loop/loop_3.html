@@ -8,23 +8,13 @@
 <script>
     let h = prompt("nhập h: ") * 1;
     for (let i = 0; i <= h; i++) {
-        for (let j = 0; j <= h + i; j++) {
-            if (j <= h + i && j >= h - i) {
+        for (let j = 0; j < h * 2; j++) {
+            if (i + j == h || i == h || j == i + h) {
                 document.write('*');
             } else {
                 document.write("&nbsp&nbsp");
             }
         }
-            for (let i = 0; i < h; i++) {
-                for (let k = 0; k < h + i; k++) {
-                    if (i == 0 || k == 0 || i == k || k == i * 2 - 1) {
-                        document.write("*");
-                    } else {
-                        document.write("&nbsp&nbsp");
-                    }
-                }
-
-            }
 
         document.write("<br>");
     }
