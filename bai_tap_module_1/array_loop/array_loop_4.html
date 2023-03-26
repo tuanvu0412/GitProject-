@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let drinks = [{
+        "name": "coffee",
+        "price": 10000
+    },
+        {
+
+            "name": "orange juice",
+            "price": 20000
+        },
+        {
+            "name": "carot juice",
+            "price": 15000
+        },
+        {
+            "name": "tomatojuice",
+            "price": 20000
+        },
+        {
+            "name": "water",
+            "price": 10000
+        },
+        {
+            "name": "coconuts juice juice",
+            "price": 20000
+        },
+    ];
+    document.write('mời bạn xem menu:');
+    document.write("<br>");
+    for (let i = 0; i < drinks.length; i++) {
+        document.write(`${i + 1}. ${drinks[i].name}`);
+        document.write("<br>");
+    }
+
+    do {
+        let pick = prompt('mời bạn chọn nươc:') * 1;
+        let price = drinks[pick - 1].price;
+        document.write(price);
+        let number = prompt('mời bạn nhập số lượng');
+        document.write('tổng số tiền bạn cần trả là:' + number * price);
+    } while (pick !== 7);
+
+</script>
+</body>
+</html>

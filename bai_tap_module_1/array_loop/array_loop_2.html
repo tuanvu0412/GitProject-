@@ -7,20 +7,15 @@
 <body>
 <script>
     let a = [1, 3, 5, 7, 9];
-    let b = [1, 3, 5, 6, 8, 7, 9];
+    let b = [1, 3, 5, 6, 8, 7, 9, 2, 4, 13];
     let c = [];
-    for (let i = 0; i < a.length; i++) {
-        for (let j = 0; j < b.length; j++) {
-            if (a[i] == b[i]) {
-                break;
-            }
-            if (a[i] !== b[i]) {
-                c.push(b[i])
-                break;
-            }
+    for (let i = 0; i < b.length; i++) {
+        if (!a.includes(b[i])){
+            c.push(b[i]);
         }
     }
-    document.write(c)
+    document.write(c);
+
 </script>
 
 </body>
