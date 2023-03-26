@@ -44,7 +44,7 @@
         let price = drinks[pick - 1].price;
         document.write(price);
         let number = prompt('mời bạn nhập số lượng');
-        document.write('tổng số tiền bạn cần trả là:' + number * price);
+        document.write(drinks[pick-1].name+' '+'tổng số tiền bạn cần trả là:' + number * price);
     } while (pick !== 7);
 
 </script>
