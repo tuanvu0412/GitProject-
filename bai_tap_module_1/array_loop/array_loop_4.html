@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    let drinks = [{
-        "name": "coffee",
-        "price": 10000
-    },
+    let drinks = [
+        {
+            "name": "coffee",
+            "price": 10000
+        },
         {
 
             "name": "orange juice",
@@ -36,6 +37,7 @@
     document.write("<br>");
     for (let i = 0; i < drinks.length; i++) {
         document.write(`${i + 1}. ${drinks[i].name}`);
+        document.write(' : '+drinks[i].price)
         document.write("<br>");
     }
 
@@ -43,7 +45,7 @@
         let pick = prompt('mời bạn chọn nươc:') * 1;
         let price = drinks[pick - 1].price;
         let number = prompt('mời bạn nhập số lượng');
-        document.write(drinks[pick-1].name+price+' '+'tổng số tiền bạn cần trả là:' + number * price);
+        document.write(drinks[pick - 1].name + price + ' ' + 'tổng số tiền bạn cần trả là:' + number * price);
     } while (pick !== 7);
 
 </script>
