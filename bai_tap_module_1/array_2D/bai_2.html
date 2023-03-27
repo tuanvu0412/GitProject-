@@ -11,16 +11,27 @@
         [7, 8, 9, 15, 17, 21]
     ];
     let newArray = [];
-    let count = 0;
     for (let i = 0; i < myArray.length; i++) {
         for (let j = 0; j < myArray[i].length; j++) {
-            if (myArray[i][j] > 1 && myArray[i][j] % 2 !== 0 ) {
+            if (myArray[i][j] < 2) {
+                continue;
+            } else if (myArray[i][j] <= 3) {
                 newArray.push(myArray[i][j]);
-                count++;
+            } else {
+                let count = 0;
+                for (let h = 2; h <= Math.sqrt(myArray[i][j]); h++) {
+                    if (myArray[i][j] % h == 0) {
+                        count++;
+                        break;
+                    }
+                }
+                if ( count==0){
+                    newArray.push(myArray[i][j])
+                }
             }
-        }if(newArray)
-    }
-    document.write(newArray)
+        }
+    }console.log(newArray)
+
 </script>
 
 </body>

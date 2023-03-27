@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArray = [
+        [1, 3, 5, 2, 7, 10, 12],
+        [7, 8, 9, 15, 17, 21]
+    ];
+    let max = myArray[0][0];
+    let min = myArray[0][0];
+    for (let i = 0; i < myArray.length; i++) {
+        for (let j = 0; j < myArray[i].length; j++) {
+            if (myArray[i][j] > max) {
+                max = myArray[i][j]
+            } else if (myArray[i][j] < min) {
+                min = myArray[i][j]
+            }
+        }
+    }
+    document.write('số lớn nhất trong mảng 2 chiều là : ' + max + 'sô nhỏ nhất : ' + min)
+</script>
+
+</body>
+</html>
