@@ -6,15 +6,12 @@
 </head>
 <body>
 <script>
-    let a = [1, 2, 3];
+    let a = [1, 2, 3,4];
     let b = [];
-    for (let i = 0; i < a.length; i++) {
-        let n = a.length
-        b[0] = a[0];
-        b[1] = a[0] + a[1];
-        b[2] = a[0] + a[1] + a[2];
-        b[n - 1] = a[0] + a[1] + a[n - 1]
-
+    let sum=a[0]
+    for (let i = 1; i < a.length; i++) {
+        sum +=a[i]
+        b.push(sum)
     }
     document.write(b)
 </script>
