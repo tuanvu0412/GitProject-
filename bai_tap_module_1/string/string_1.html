@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = 'dAnG  TuAn vU'
+    let str1 = str.replace(/\s+/g,' ')
+    console.log(str1)
+    let str2 = str1.toLowerCase().split(" ");
+    let str3 = [];
+    let max = 0;
+    for (let i = 0; i < str2.length; i++) {
+        let capitalizedStr = str2[i].charAt(0).toUpperCase() + str2[i].slice(1);
+        str3.push(capitalizedStr)
+        if (str3[i].length > max) {
+            max = str3[i].length
+        }
+    }
+    document.write('trước khi được chuẩn hóa: '+ str)
+    document.write('<br>')
+    document.write('sau khi được chuẩn hóa: '+str3.join(' '))
+    document.write('<br>')
+    document.write('độ dài nhất của từ trong chuỗi là: ' + max)
+
+</script>
+
+</body>
+</html>
