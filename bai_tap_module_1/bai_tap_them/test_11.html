@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="key1" placeholder="thêm mới id">
+<input type="text" id="key2" placeholder="thêm mới tên sản phẩm">
+<input type="text" id="key3" placeholder="thêm mới công ty">
+<input type="text" id="key4" placeholder="thêm mới giá">
+<button type="button" onclick="checkListLap()">thêm máy tính</button>
+<p id="display"></p>
+<script>
+    class MayTinh {
+        constructor(id, name, company, price) {
+            this.id = id;
+            this.name = name;
+            this.company = company;
+            this.price = price;
+        }
+
+        getId(id) {
+            this.id = id;
+        }
+
+        getName(name) {
+            this.name = name;
+        }
+
+        getCompany(company) {
+            this.company = name;
+        }
+
+        getPrice(price) {
+            this.price = price;
+        }
+
+        setId() {
+            return this.id;
+        }
+
+        setName() {
+           return  this.name ;
+        }
+
+        setCompany() {
+          return  this.company ;
+        }
+
+        setPrice() {
+          return   this.price ;
+        }
+    }
+
+    let mayTinh1 = new MayTinh(1, 'dellxps1', 'dell', 1000)
+    let mayTinh2 = new MayTinh(2, 'dellxps2', 'dell', 2000)
+    let mayTinh3 = new MayTinh(3, 'dellxps3', 'dell', 3000)
+    let mayTinhMoi = [];
+    mayTinhMoi.push(mayTinh1, mayTinh2, mayTinh3);
+    function checkListLap(){
+        let themSanPham= new MayTinh(
+            document.getElementById("key1").value,
+            document.getElementById("key2").value,
+            document.getElementById("key3").value,
+            document.getElementById("key4").value,
+        )
+        mayTinhMoi.push(themSanPham);
+        document.getElementById("display").value=' ';
+        kiemTraMayTinh()
+    }
+    checkListLap()
+    function kiemTraMayTinh() {
+        let tableString = `
+        <table border="1">
+    <tr>
+        <th>mã máy</th>
+        <th>tên máy</th>
+        <th>tên hãng</th>
+        <th>giá bán</th>
+    </tr>
+    `;
+        for (let i = 0; i < mayTinhMoi.length; i++) {
+            tableString +='<tr>'+
+                '<td>' + mayTinhMoi[i].setId() + '</td>' +
+                '<td>' + mayTinhMoi[i].setName() + '</td>' +
+                '<td>' + mayTinhMoi[i].setCompany() + '</td>' +
+                '<td>' + mayTinhMoi[i].setPrice() + '</td>' +
+                '</tr>';
+        }
+        tableString += "</table>"
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    kiemTraMayTinh()
+</script>
+
+</body>
+</html>

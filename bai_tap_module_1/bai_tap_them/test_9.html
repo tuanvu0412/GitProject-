@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function buildFunciton(string) {
+        let str2 = [];
+        let string2 = string.toLowerCase().split(" ");
+        for (let i = 0; i < string2.length; i++) {
+            if (string2[i] != " ") {
+                str2.push(string2[i]);
+            }
+        }
+            let str3 = [];
+            for (let j = 0; j < str2.length; j++) {
+                    let str = str2[j].charAt(0).toUpperCase() + str2[j].slice(0,0);
+                    str3.push(str);
+            }
+            document.write(str3.join(''))
+    }
+    let newStrings = ('nothings  Nothings    imposible');
+    buildFunciton(newStrings);
+</script>
+
+</body>
+</html>

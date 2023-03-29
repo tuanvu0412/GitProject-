@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập tổng phần tử') * 1;
+    let array = [];
+    let count = 0;
+    let avg = 0;
+    let dem=0
+    for (let i = 0; i <= n; i++) {
+        array[i] = prompt('nhập các phần tử') * 1;
+    }
+    for (let j = 0; j < array.length; j += 3) {
+        if (array[j] % 5 == 0) {
+            dem += array[j]
+            count++;
+        }
+        avg=dem/count
+    }
+  document.write(avg)
+
+</script>
+
+</body>
+</html>
